@@ -1,0 +1,97 @@
+
+    <app-employee-information></app-employee-information>
+    <br><br><br>
+          <form (ngSubmit)="onSubmit()" #userForm="ngForm">                                
+              <div class="container">
+              <label for="employeeId" class ="label"><font color=#369 size="4">Employee Id:</font></label>
+              <input type="text" [(ngModel)]="employee.employeeId" 
+                class="form-control"
+                id="employeeId"
+                name="employeeId"
+                placeholder="Enter Employee Id"
+                required #employeeId="ngModel">
+              <br>
+              <label for="firstName"class ="label"><font color=#369 size="4">First Name:</font></label>
+              <input type="text" [(ngModel)]="employee.firstName" 
+                class="form-control"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter First Name"
+                required #firstName="ngModel">   
+                <br>          
+            
+              <label for="lastName"class ="label"><font color=#369 size="4">Last Name:</font></label>
+              <input type="text" [(ngModel)]="employee.lastName" 
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Enter Last Name"
+                    required #lastName="ngModel">  
+              <br>                      
+            
+              <label for="dateOfBirth"class ="label"><font color=#369 size="4">Date Of Birth:</font></label>
+              <input type="text" [(ngModel)]="employee.dateOfBirth" 
+                    class="form-control"
+                    id="dateOfBirth"
+                    name="dateOfBirth"
+                    placeholder="YYYY-MM-DD"
+                    required #dateOfBirth="ngModel"> 
+              <br>    
+              
+                          
+              <label for="basicPay"class ="label"><font color=#369 size="4">Basic Pay:</font></label>
+              <input type="text" [(ngModel)]="employee.basicPay" 
+                    class="form-control"
+                    id="basicPay"
+                    name="basicPay"
+                    placeholder="Enter BasicPay">   
+              <br>   
+            
+              <label for="hra"class ="label"><font color=#369 size="4">HRA:</font></label>
+              <input type="text" [(ngModel)]="employee.hra" 
+                      class="form-control"
+                      id="hra"
+                      name="hra"
+                      placeholder="Enter HRA"> 
+              <br>                                   
+            
+              <label for="travelAllowance"class ="label"><font color=#369 size="4">Travel Allowance:</font></label>
+              <input type="text" [(ngModel)]="employee.travelAllowance" 
+                      class="form-control"
+                      id="travelAllowance"
+                      name="travelAllowance"
+                      placeholder="Enter Travel Allowance">  
+              <br> 
+              
+              <label for="medicalAllowance"class ="label"><font color=#369 size="4">Medical Allowance:</font></label>
+              <input type="text" [(ngModel)]="employee.medicalAllowance" 
+                      class="form-control"
+                      id="medicalAllowance"
+                      name="medicalAllowance"
+                      placeholder="Enter Medical Allowance">  
+              <br>  
+
+              <label for="dnsAllowance"class ="label"><font color=#369 size="4">DNS Allowance:</font></label>
+              <input type="text" [(ngModel)]="employee.dnsAllowance" 
+                      class="form-control"
+                      id="dnsAllowance"
+                      name="dnsAllowance"
+                      placeholder="Enter DNS Allowance">  
+              <br>  
+
+              <label for="vacationAllowance"class ="label"><font color=#369 size="4">Vacation Allowance:</font></label>
+              <input type="text" [(ngModel)]="employee.vacationAllowance" 
+                      class="form-control"
+                      id="vacationAllowance"
+                      name="vacationAllowance"
+                      placeholder="Enter Vacation Allowance">  
+              <br>  
+            </div>
+            <button type="submit" >Submit</button>
+          </form>
+      <br><br><br>
+      <div class="alert" *ngIf = "alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              Employee has been updated.
+      </div>
+

@@ -1,0 +1,9 @@
+<br><br>
+<nav>   
+    <ul>                            
+    <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/searchEmployee" class="nav-link">Search Employee</a></li>
+    <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/updateEmployee" class="nav-link">Update Employee</a></li>
+    <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>            
+    </ul>
+</nav>
+
